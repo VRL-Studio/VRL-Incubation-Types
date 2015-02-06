@@ -105,7 +105,7 @@ buildscript {
 // somehow the difference operator for FileCollection does not work,
 // therefore i include all classes in a positive way
 jacocoTestReport.doFirst {
-	def base_dir = 'build/classes/main/edu/gcsc/vrl/incubationtypes/';
+	def base_dir = 'build/classes/main/edu/gcsc/vrl/typesincubation/';
 	classDirectories = files(base_dir+'/DoubleSliderType.class',
 	                         base_dir+'/FloatSliderType.class',
 			         base_dir+'/DoubleSliderArrayType.class',
