@@ -1,0 +1,3 @@
+include 'VRL-Incubation-Types'
+include 'VRL-Incubation-Types-git-dependencies:vrl'
+include 'VRL-Incubation-Types-git-dependencies:dummy-project-a'
