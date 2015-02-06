@@ -3,7 +3,6 @@ Repository for the collection of new type representations considered for integra
 
 CI:
 * [![CI Build Status](https://travis-ci.org/VRL-Studio/VRL-Incubation-Types.svg?branch=master)](https://travis-ci.org/VRL-Studio/VRL-Incubation-Types)
-[![CI Build Status](https://travis-ci.org/VRL-Studio/VRL-Incubation-Types.svg?branch=devel)](https://travis-ci.org/VRL-Studio/VRL-Incubation-Types)
 [![CI Coverage Status](https://coveralls.io/repos/VRL-Studio/VRL-Incubation-Types/badge.png)](https://coveralls.io/r/VRL-Studio/VRL-Incubation-Types)
 
 Waffle:
