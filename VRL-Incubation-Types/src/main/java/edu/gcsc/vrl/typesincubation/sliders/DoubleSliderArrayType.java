@@ -1,5 +1,5 @@
 /// package's name
-package edu.gcsc.vrl.typesincubation;
+package edu.gcsc.vrl.typesincubation.sliders;
 
 /// imports
 import eu.mihosoft.vrl.annotation.ParamInfo;

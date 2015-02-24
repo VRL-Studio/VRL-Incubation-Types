@@ -1,5 +1,5 @@
 /// package's name
-package edu.gcsc.vrl.MembranePotentialMapping.types;
+package edu.gcsc.vrl.typesincubation.sliders;
 
 /// imports
 import eu.mihosoft.vrl.annotation.TypeInfo;
@@ -13,26 +13,30 @@ import eu.mihosoft.vrl.visual.MessageType;
 import eu.mihosoft.vrl.visual.VBoxLayout;
 import groovy.lang.Script;
 import eu.mihosoft.vrl.system.VMessage;
+import eu.mihosoft.vrl.visual.VTextField;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 /**
- * @brief type representation for Floats respectively doubles
+ * @brief type representation for Doubles respectively doubles
  *
  * @author stephan
  */
-@TypeInfo(type = Float.class, input = true, output = false, style = "slider")
-public final class FloatSliderType extends TypeRepresentationBase {
+@TypeInfo(type = Double.class, input = true, output = false, style = "slider-textfield")
+public final class DoubleSliderTextFieldType extends TypeRepresentationBase {
 
 	private static final long serialVersionUID = 1L;
 	private Integer maxValue = 1000;
 	private Integer minValue = 0;
-	private Float step = 0.001f;
+	private Double step = 0.001;
 	private JSlider input = new JSlider();
 	private TypeRepresentationLabel valueLabel;
+	private VTextField sliderTextField;
 
 	/**
 	 * @brief default ctor
 	 */
-	public FloatSliderType() {
+	public DoubleSliderTextFieldType() {
 		VBoxLayout layout = new VBoxLayout(this, VBoxLayout.Y_AXIS);
 		setLayout(layout);
 
@@ -40,9 +44,37 @@ public final class FloatSliderType extends TypeRepresentationBase {
 		/// note that we need to perform a certain amount of
 		/// the code below, for re-initializing the range stepping
 		valueLabel = new TypeRepresentationLabel(this, getMinValue().toString());
-		nameLabel.setText("Float:");
+		nameLabel.setText("Double:");
 		nameLabel.setAlignmentX(0.0f);
 		this.add(nameLabel);
+		sliderTextField = new VTextField(this);
+		sliderTextField.setText("" + getMinValue());
+		sliderTextField.addKeyListener(new KeyListener() {
+			@Override
+			public void keyTyped(KeyEvent keyEvent) {
+
+			}
+
+			@Override
+			public void keyPressed(KeyEvent keyEvent) {
+
+			}
+
+			@Override
+			public void keyReleased(KeyEvent keyEvent) {
+				try {
+					/**
+					 * @todo is this inverse operation correct? 
+					 */
+					input.setValue((int)(100.0d * Double.parseDouble(sliderTextField.getText()) / (100 * step)));
+				} catch (Exception ex) {
+					System.err.println(ex);
+				}
+			}
+		}
+		);
+		sliderTextField.setEditable(true);
+		this.add(sliderTextField);
 
 		int height = (int) this.input.getMinimumSize().getHeight();
 		this.input.setPreferredSize(new Dimension(100, height));
@@ -64,8 +96,9 @@ public final class FloatSliderType extends TypeRepresentationBase {
 		input.addChangeListener(new ChangeListener() {
 			@Override
 			public void stateChanged(ChangeEvent e) {
-				Float value = Math.round(input.getValue() * step * 100) / 100.0f;
+				Double value = Math.round(input.getValue() * step * 100) / 100.0d;
 				valueLabel.setText(value.toString());
+				sliderTextField.setText(value.toString());
 				setDataOutdated();
 			}
 		});
@@ -90,7 +123,7 @@ public final class FloatSliderType extends TypeRepresentationBase {
 		try {
 			v = (Integer) o;
 		} catch (Exception e) {
-			VMessage.info("FloatSliderType", "Could not set the view's value. Error: " + e);
+			VMessage.info("DoubleSliderType", "Could not set the view's value. Error: " + e);
 		}
 
 		input.setValue(v);
@@ -103,16 +136,15 @@ public final class FloatSliderType extends TypeRepresentationBase {
 	}
 
 	/**
-	 * @return 
-	 * @brief get view value
+	 * @return @brief get view value
 	 */
 	@Override
 	public Object getViewValue() {
-		Float o = null;
+		Double o = null;
 		try {
-			o = new Float(valueLabel.getText());
+			o = new Double(valueLabel.getText());
 		} catch (Exception e) {
-			VMessage.info("FloatSliderType", "Could not get the view's value. Error: " + e);
+			VMessage.info("DoubleSliderType", "Could not get the view's value. Error: " + e);
 		}
 
 		return o;
@@ -128,7 +160,7 @@ public final class FloatSliderType extends TypeRepresentationBase {
 		try {
 			v = (Integer) value;
 		} catch (Exception e) {
-			VMessage.exception("FloatSliderType", "Could not evaluate script options. Error: " + e);
+			VMessage.exception("DoubleSliderType", "Could not evaluate script options. Error: " + e);
 		}
 
 		// range condition
@@ -159,7 +191,7 @@ public final class FloatSliderType extends TypeRepresentationBase {
 				}
 
 				box.addUniqueMessage("Value out of range:",
-					"FloatSliderType: value does not meet range "
+					"DoubleSliderType: value does not meet range "
 					+ "condition. Therefore value will be trimmed to "
 					+ vString, getConnector(),
 					MessageType.WARNING_SINGLE);
@@ -173,7 +205,7 @@ public final class FloatSliderType extends TypeRepresentationBase {
 
 	/**
 	 * @brief return maximum value
-	 * @return 
+	 * @return
 	 */
 	public final Integer getMaxValue() {
 		return maxValue;
@@ -190,7 +222,7 @@ public final class FloatSliderType extends TypeRepresentationBase {
 
 	/**
 	 * @brief get the minimum value
-	 * @return 
+	 * @return
 	 */
 	public final Integer getMinValue() {
 		return minValue;
@@ -198,7 +230,7 @@ public final class FloatSliderType extends TypeRepresentationBase {
 
 	/**
 	 * @brief sets the minimum value
-	 * @param minValue 
+	 * @param minValue
 	 */
 	public final void setMinValue(Integer minValue) {
 		this.minValue = (int) (minValue / this.step);
@@ -209,34 +241,34 @@ public final class FloatSliderType extends TypeRepresentationBase {
 	 * @brief sets the stepping value
 	 * @param step
 	 */
-	public final void setStepValue(Float step) {
+	public final void setStepValue(Double step) {
 		this.step = step;
 	}
 
 	/**
 	 * @brief gets the stepping value
-	 * @return 
+	 * @return
 	 */
-	public final Float getStepValue() {
+	public final Double getStepValue() {
 		return this.step;
 	}
 
 	/**
 	 * @brief evaluates script options on request
-	 * @param script 
+	 * @param script
 	 */
 	@Override
 	protected void evaluationRequest(Script script) {
 		Object property = null;
 
 		if (getValueOptions() != null) {
-			
+
 			if (getValueOptions().contains("step")) {
 				property = script.getProperty("step");
 			}
 
 			if (property != null) {
-				setStepValue(((Number) property).floatValue());
+				setStepValue(((Number) property).doubleValue());
 			}
 
 			if (getValueOptions().contains("min")) {

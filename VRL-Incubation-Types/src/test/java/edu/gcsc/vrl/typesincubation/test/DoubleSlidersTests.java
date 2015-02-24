@@ -6,6 +6,7 @@ package edu.gcsc.vrl.typesincubation.test;
  * and open the template in the editor.
  */
 
+import edu.gcsc.vrl.typesincubation.sliders.DoubleSliderType;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -42,5 +43,7 @@ public class DoubleSlidersTests {
 	// The methods must be annotated with annotation @Test. For example:
 	//
 	@Test
-	public void hello() {}
+	public void hello() {
+		DoubleSliderType a = new DoubleSliderType();
+	}
 }
