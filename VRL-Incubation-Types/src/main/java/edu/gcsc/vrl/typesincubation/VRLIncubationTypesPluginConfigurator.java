@@ -2,6 +2,16 @@
 package edu.gcsc.vrl.typesincubation;
 
 /// imports
+import edu.gcsc.vrl.typesincubation.components.FloatSliderArrayTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.DoubleSliderTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.DenseMatrixTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.SparseMatrixTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.DenseVectorTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.FloatSliderTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.DoubleSliderArrayTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.SparseVectorTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.FloatSliderTextFieldTypeTestComponent;
+import edu.gcsc.vrl.typesincubation.components.DoubleSliderTextFieldTypeTestComponent;
 import edu.gcsc.vrl.typesincubation.sliders.DoubleSliderType;
 import edu.gcsc.vrl.typesincubation.sliders.DoubleSliderArrayType;
 import edu.gcsc.vrl.typesincubation.sliders.DoubleSliderTextFieldType;
@@ -60,6 +70,7 @@ public class VRLIncubationTypesPluginConfigurator extends VPluginConfigurator {
 			vapi.addTypeRepresentation(DoubleSliderTextFieldType.class);
 			vapi.addComponent(FloatSliderTypeTestComponent.class);
 			vapi.addComponent(FloatSliderArrayTypeTestComponent.class);
+			vapi.addComponent(FloatSliderTextFieldTypeTestComponent.class);
 			vapi.addComponent(DoubleSliderTypeTestComponent.class);
 			vapi.addComponent(DoubleSliderArrayTypeTestComponent.class);
 			vapi.addComponent(DoubleSliderTextFieldTypeTestComponent.class);
