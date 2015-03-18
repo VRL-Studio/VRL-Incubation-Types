@@ -4,22 +4,16 @@
   <auxiliary>
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-      <group/>
+      <group>
+        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/build.gradle</file>
+        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/settings.gradle</file>
+      </group>
     </open-files>
     <editor-bookmarks lastBookmarkId="0" xmlns="http://www.netbeans.org/ns/editor-bookmarks/2"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
       <group>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/sliders/DoubleSliderType.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/sliders/FloatSliderType.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/VRLIncubationTypesPluginConfigurator.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/test/java/edu/gcsc/vrl/typesincubation/test/FloatSlidersTests.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/FloatSliderTypeTestComponent.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/sliders/FloatSliderArrayType.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/DoubleSliderTypeTestComponent.java</file>
         <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/build.gradle</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/sliders/DoubleSliderTextFieldType.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/main/java/edu/gcsc/vrl/typesincubation/sliders/DoubleSliderArrayType.java</file>
-        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/src/test/java/edu/gcsc/vrl/typesincubation/test/DoubleSlidersTests.java</file>
+        <file>file:/Users/stephan/Code/git/VRL-Incubation-Types/VRL-Incubation-Types/settings.gradle</file>
       </group>
     </open-files>
   </auxiliary>
