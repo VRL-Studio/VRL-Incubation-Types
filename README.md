@@ -10,6 +10,9 @@ Coveralls:
 BuildHive:
 * [![Build Status](https://buildhive.cloudbees.com/job/VRL-Studio/job/VRL-Incubation-Types/badge/icon)](https://buildhive.cloudbees.com/job/VRL-Studio/job/VRL-Incubabtion-Types)
 
+VersionEye:
+* [![Dependency Status](https://www.versioneye.com/user/projects/550959024996eb36f7000001/badge.svg?style=flat)](https://www.versioneye.com/user/projects/550959024996eb36f7000001)
+
 Waffle:
 * [![Stories in Backlog](https://badge.waffle.io/VRL-Studio/VRL-Incubation-Types.png?label=backlog&title=Backlog)](http://waffle.io/VRL-Studio/VRL-Incubation-Types)
 [![Stories in Ready](https://badge.waffle.io/VRL-Studio/VRL-Incubation-Types.png?label=ready&title=Ready)](http://waffle.io/VRL-Studio/VRL-Incubation-Types)

@@ -166,3 +166,11 @@ dependencies {
   compile('eu.mihosoft:vrl:v0.4.2.8.6').ext.git                 = 'https://github.com/VRL-Studio/VRL.git'
 }
 */
+
+plugins {
+    id "org.standardout.versioneye" version "1.0.1"
+}
+
+versioneye {
+  dependencies = transitive
+}
