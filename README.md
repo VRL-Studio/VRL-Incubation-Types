@@ -8,5 +8,3 @@ CI:
 Waffle:
 * [![Stories in Backlog](https://badge.waffle.io/VRL-Studio/VRL-Incubation-Types.png?label=backlog&title=Backlog)](http://waffle.io/VRL-Studio/VRL-Incubation-Types)
 [![Stories in Ready](https://badge.waffle.io/VRL-Studio/VRL-Incubation-Types.png?label=ready&title=Ready)](http://waffle.io/VRL-Studio/VRL-Incubation-Types)
-[![Stories in In Progress](https://badge.waffle.io/VRL-Studio/VRL-Incubation-Types.png?label=in progress&title=In Progress)](http://waffle.io/VRL-Studio/VRL-Incubation-Types)
-[![Stories in Done](https://badge.waffle.io/VRL-Studio/VRL-Incubation-Types.png?label=done&title=Done)](http://waffle.io/VRL-Studio/VRL-Incubation-Types)
